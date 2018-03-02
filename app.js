@@ -178,7 +178,6 @@ app.get("/" , function (req,res){
 // ajax
 
 app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({extended: true}))
 
 app.post('/ajax_modifier', (req,res) => {
    req.body._id = ObjectID(req.body._id)
