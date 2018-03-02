@@ -48,39 +48,39 @@ app.get('/list', function (req, res) {
 })
 
 // ====================== POUR AJOUTER
-app.post('/ajouter', (req, res) => {
-	console.log('req.body' + req.body)
-	let oModif;
-	 if (req.body['_id'] != '')
-	 { 
-		console.log('sauvegarde') 
-		oModif = {
-			"_id": ObjectID(req.body['_id']), 
-			nom: req.body.nom,
-			prenom:req.body.prenom, 
-			telephone:req.body.telephone,
-			courriel:req.body.courriel
-	 	}
-	 let util = require("util");
+// app.post('/ajouter', (req, res) => {
+// 	console.log('req.body' + req.body)
+// 	let oModif;
+// 	 if (req.body['_id'] != '')
+// 	 { 
+// 		console.log('sauvegarde') 
+// 		oModif = {
+// 			"_id": ObjectID(req.body['_id']), 
+// 			nom: req.body.nom,
+// 			prenom:req.body.prenom, 
+// 			telephone:req.body.telephone,
+// 			courriel:req.body.courriel
+// 	 	}
+// 	 let util = require("util");
 
-	 }
-	 else
-	 {
-		 console.log('insert')
-		 console.log(req.body)
-		 oModif = {
-		 nom: req.body.nom,
-		 prenom:req.body.prenom, 
-		 telephone:req.body.telephone,
-		 courriel:req.body.courriel
-	 	}
-	 }
-	 db.collection('adresse').save(oModif, (err, result) => {
-	 if (err) return console.log(err)
-	 console.log('sauvegarder dans la BD')
-	 res.redirect('/list')
-	 })
-})
+// 	 }
+// 	 else
+// 	 {
+// 		 console.log('insert')
+// 		 console.log(req.body)
+// 		 oModif = {
+// 		 nom: req.body.nom,
+// 		 prenom:req.body.prenom, 
+// 		 telephone:req.body.telephone,
+// 		 courriel:req.body.courriel
+// 	 	}
+// 	 }
+// 	 db.collection('adresse').save(oModif, (err, result) => {
+// 	 if (err) return console.log(err)
+// 	 console.log('sauvegarder dans la BD')
+// 	 res.redirect('/list')
+// 	 })
+// })
 
 // =========== POUR DETRUIRE
 app.get('/detruire/:id', (req, res) => {
@@ -175,7 +175,7 @@ app.get("/" , function (req,res){
 })
 
 
-// ajax
+// ==========================================ajax
 
 app.use(bodyParser.json())
 
