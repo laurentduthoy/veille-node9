@@ -1,0 +1,13 @@
+{
+	"prenom": "first name",
+	"Hello": "Hello",
+	"nom": "last name",
+	"vide": "empty",
+	"accueil": "home",
+	"adresse": "address",
+	"peupler": "populate",
+	"ajouter": "add",
+	"courriel": "email",
+	"telephone": "phone number",
+	"et" : "and"
+}
